@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BlackDuckLibComponent } from './black-duck-lib.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
-  declarations: [BlackDuckLibComponent],
+  declarations: [BlackDuckLibComponent, ButtonComponent],
   imports: [
   ],
-  exports: [BlackDuckLibComponent]
+  exports: [BlackDuckLibComponent, ButtonComponent]
 })
 export class BlackDuckLibModule { }
