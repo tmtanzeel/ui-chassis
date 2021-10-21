@@ -12,4 +12,9 @@ export class ButtonComponent implements OnInit {
   ngOnInit() {
   }
 
+  mymethod() {
+    console.log("clicked");
+
+  }
+
 }
