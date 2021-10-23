@@ -128,3 +128,5 @@ To verify the installtion check the dependencies in `package.json` of your appli
 ```
 
 Note: Your file path will differ from mine.
+
+Also you can install directly using: `npm i black-duck-lib`
