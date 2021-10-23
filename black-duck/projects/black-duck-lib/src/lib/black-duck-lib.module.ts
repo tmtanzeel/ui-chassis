@@ -7,6 +7,6 @@ import { TwitterCardComponent } from './twitter-card/twitter-card.component';
   declarations: [BlackDuckLibComponent, ButtonComponent, TwitterCardComponent],
   imports: [
   ],
-  exports: [BlackDuckLibComponent, ButtonComponent]
+  exports: [BlackDuckLibComponent, ButtonComponent, TwitterCardComponent]
 })
 export class BlackDuckLibModule { }
