@@ -1,1 +1,40 @@
-<p>twitter-card works!</p>
+<h1 class="heading">Twitter Timeline</h1>
+<div ngIf="undefined === myTimeline">Loading...</div>
+<div ngIf="undefined !== myTimeline">
+    <div>
+        <div class="container card" ngFor="let tweets? of myTimeline.data">
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-lg-1 image-column">
+                    <div class="twitter-logo-wrapper">
+                        <img class="twitter-logo" src="https://imgur.com/C0dsAIi">
+                    </div>
+                </div>
+                <div class="col-sm-11 col-md-11 col-lg-11 text-column">
+                    <p class="screen-name"><b>{{tweets?.user.screen_name}}</b><br>
+                        <span class="user-status">{{tweets?.user.description}}</span>
+                    </p>
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <span class="twitter-logo">{{tweets?.full_text}}</span>&nbsp;&nbsp;&nbsp;
+                    <p class="user-location">
+                        - tweet by {{tweets?.user.name}}
+                        <span class="user-status"><img src="{{tweets?.user.profile_image_url_https}}"></span>
+                    </p>
+                    <p>
+                        <i class="icon-heart-empty heart-symbol"></i>&nbsp;
+                        <span class="likes-count">{{tweets?.user.followers_count}}</span>&nbsp;&nbsp;&nbsp;
+                        <span class="date-of-post">{{tweets?.created_at}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="date-of-post">
+                            <a ngIf="tweets['entities']['urls'].length > 0" href="{{tweets['entities']['urls'][0]['expanded_url']}}" target="_blank">
+                                <button class="btn btn-info">Read</button>
+                             </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

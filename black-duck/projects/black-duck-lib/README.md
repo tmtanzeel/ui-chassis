@@ -5,7 +5,16 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 ## Code scaffolding
 
 Run `ng generate component component-name --project black-duck-lib` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project black-duck-lib`.
-> Note: Don't forget to add `--project black-duck-lib` or else it will be added to the default project in your `angular.json` file. 
+> Note: Don't forget to add `--project black-duck-lib` or else it will be added to the default project in your `angular.json` file.
+
+To gennerate new component or service
+> cd projects/blackduck-lib/src/lib
+
+> ng g c mycomponent
+
+or
+
+> ng g s myservice
 
 ## Build
 
