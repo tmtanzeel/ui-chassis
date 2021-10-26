@@ -22,7 +22,13 @@ Run `ng build black-duck-lib` to build the project. The build artifacts will be 
 
 ## Publishing
 
-After building your library with `ng build black-duck-lib`, go to the dist folder `cd dist/black-duck-lib` and run `npm publish`.
+Stay at `xpert@xpert-Inspiron-3576:~/Documents/ui-chassis/black-duck$ ` and run `ng build black-duck-lib`. After building your library go to the dist folder `cd dist/black-duck-lib` and run `npm publish`.
+
+If you already have some previous version published then it will say throw error. Try following 2 commands:
+
+> npm version <new-version for e.g. 0.0.4> 
+
+> npm publish
 
 ## Running unit tests
 
