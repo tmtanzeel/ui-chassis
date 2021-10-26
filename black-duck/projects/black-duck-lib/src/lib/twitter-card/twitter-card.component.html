@@ -1,6 +1,6 @@
 <h1 class="heading">Twitter Timeline</h1>
-<div ngIf="undefined === myTimeline">Loading...</div>
-<div ngIf="undefined !== myTimeline">
+<div *ngIf="undefined === myTimeline">Loading...</div>
+<div *ngIf="undefined !== myTimeline">
     <div>
         <div class="container card" *ngFor="let tweets of myTimeline.data">
             <div class="row">
@@ -28,9 +28,9 @@
                         <span class="likes-count">{{tweets.user.followers_count}}</span>&nbsp;&nbsp;&nbsp;
                         <span class="date-of-post">{{tweets.created_at}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <span class="date-of-post">
-                            <a ngIf="tweets['entities']['urls'].length > 0" href="{{tweets['entities']['urls'][0]['expanded_url']}}" target="_blank">
+                            <!-- <a *ngIf="tweets['entities']['urls'].length > 0" href="{{tweets['entities']['urls'][0]['expanded_url']}}" target="_blank">
                                 <button class="btn btn-info">Read</button>
-                             </a>
+                             </a> -->
                         </span>
                     </p>
                 </div>
